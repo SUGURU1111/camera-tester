@@ -11,6 +11,10 @@ if  not cap.isOpened():
 print("摄像头打开成功!")
 start_time = time.time()
 frame_count = 0
+width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
+resolution_text = f"Resolution: {int(width)} X {int(height)}"
+
 while True:
     ret, frame = cap.read()
     if not ret:
@@ -27,6 +31,15 @@ while True:
         frame,
         fps_text,
         (20, 40),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        1,
+        (0, 255, 0),
+        2
+    )
+    cv2.putText(
+        frame,
+        resolution_text,
+        (20, 80),
         cv2.FONT_HERSHEY_SIMPLEX,
         1,
         (0, 255, 0),
