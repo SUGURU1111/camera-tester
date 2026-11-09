@@ -1,6 +1,8 @@
 
 # Camera Tester v0.1
-## 自己瞎做的东西，主要用于练习使用GitHub工具
+
+## 自己瞎做的东西，主要用于使用GitHub工具
+
 
 一个基于 Python + OpenCV 编写的摄像头测试工具。
 
